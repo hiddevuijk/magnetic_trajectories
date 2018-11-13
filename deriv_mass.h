@@ -30,8 +30,9 @@ struct Deriv_mass {
 		double B;	
 		double L;
 		double omega;
+public:
 		Ranq2 ranNR;	// the ranom number generator
-
+private:
 		double sqrt2;
 
 		double Bfield(const std::vector<double>& ri) {
@@ -53,8 +54,6 @@ void Deriv_mass::operator() (
 
 	double Bri; 
 
-	// init wallForce to 0s because NoWall does noet change 
-	// this vector!!!!!
 	for(int i=0;i<N;++i) {
 
 		Bri = Bfield(r[i]);
@@ -65,7 +64,6 @@ void Deriv_mass::operator() (
 		r[i][0] += dr[i][0];
 		r[i][1] += dr[i][1];
 		r[i][2] += dr[i][2];
-
 
 
 		v[i][0] += (-Bri*v[i][1]*dt - v[i][0]*dt + ndist(ranNR)*sqrt_dt*sqrt2)/m;

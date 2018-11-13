@@ -1,3 +1,6 @@
 *.swp
 *.dat
 *.txt
+fig.py
+plot.py
+

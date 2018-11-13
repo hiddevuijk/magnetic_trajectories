@@ -49,17 +49,17 @@ void Deriv_od::operator() (
 {
 	double sqrt_dt = std::sqrt(dt);
 	double etaX, etaY;
-	double B,Bp;
+	double Bi,Bpi;
 	double A,D,Ap,Dp;
 	for(int i=0;i<N;++i) {
 
-		B = Bfield(r[i]);
-		Bp = BfieldP(r[i]);
+		Bi = Bfield(r[i]);
+		Bpi = BfieldP(r[i]);
 
-		D = 1./(1+B*B);
-		A = B*D;
-		Dp = -2*A*D*Bp;
-		Ap = B*(1-B*B)*D*D;
+		D = 1./(1+Bi*Bi);
+		A = Bi*D;
+		Dp = -2*A*D*Bpi;
+		Ap = Bi*(1-Bi*Bi)*D*D;
 
 
 		etaX = ndist(ranNR)*sqrt_dt*sqrt2;
