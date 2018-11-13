@@ -11,6 +11,8 @@
 #include "integrate.h"
 
 #include <iostream>
+#include <iomanip>
+#include <fstream>
 #include <vector>
 #include <vector>
 #include <string>
@@ -125,10 +127,37 @@ int main()
 	}
 
 	// save data
+	ofstream t_out;
+	t_out.open("t.dat");
+	ofstream x0_out;
+	x0_out.open("x0.dat");
+	ofstream y0_out;
+	x0_out.open("y0.dat");
+	ofstream z0_out;
+	z0_out.open("z0.dat");
+
+	ofstream x1_out;
+	x1_out.open("x1.dat");
+	ofstream y1_out;
+	x1_out.open("y1.dat");
+	ofstream z1_out;
+	z1_out.open("z1.dat");
+
+	ofstream x2_out;
+	x2_out.open("x2.dat");
+	ofstream y2_out;
+	x2_out.open("y2.dat");
+	ofstream z2_out;
+	z2_out.open("z2.dat");
+
+	ofstream x_out;
+	x_out.open("x.dat");
+	ofstream y_out;
+	x_out.open("y.dat");
+	ofstream z_out;
+	z_out.open("z.dat");
 
 
-
-	
 	return 0;
 
 }
