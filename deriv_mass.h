@@ -66,8 +66,8 @@ void Deriv_mass::operator() (
 		r[i][2] += dr[i][2];
 
 
-		v[i][0] += (-Bri*v[i][1]*dt - v[i][0]*dt + ndist(ranNR)*sqrt_dt*sqrt2)/m;
-		v[i][1] += (Bri*v[i][0]*dt - v[i][1]*dt + ndist(ranNR)*sqrt_dt*sqrt2)/m;
+		v[i][0] += (Bri*v[i][1]*dt - v[i][0]*dt + ndist(ranNR)*sqrt_dt*sqrt2)/m;
+		v[i][1] += (-Bri*v[i][0]*dt - v[i][1]*dt + ndist(ranNR)*sqrt_dt*sqrt2)/m;
 		v[i][2] += (-v[i][2]*dt+ ndist(ranNR)*sqrt_dt*sqrt2)/m;	
 
 

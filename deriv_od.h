@@ -52,7 +52,7 @@ void Deriv_od::operator() (
 	double Bi,Bpi;
 	double D;
 	for(int i=0;i<N;++i) {
-
+	
 		Bi = Bfield(r[i]);
 		Bpi = BfieldP(r[i]);
 
