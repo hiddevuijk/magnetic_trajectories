@@ -15,8 +15,10 @@ double ndist(RandomGenerator& ran)
 	double x1=0.;
 	double x2=0.;
 	double y1=0.;
-	static double y2=0.;
-	static bool useY2 = false;
+	double y2=0.;
+	bool useY2 = false;
+	//static double y2=0.;
+	//static bool useY2 = false;
 	double w=0.;
 
 	// If useY2 == true, use the y2 that was 
